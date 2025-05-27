@@ -119,7 +119,7 @@ python Q4_Gainers_Losers_Scanner.py
 Install all required packages using:
 
 ```bash
-pip install yfinance matplotlib seaborn pandas rich
+pip install -r requirements
 ```
 
 > Note: `matplotlib` may require a display backend for Linux systems. You can use Jupyter Notebooks or install GUI packages like `Tkinter` if `plt.show()` fails.
