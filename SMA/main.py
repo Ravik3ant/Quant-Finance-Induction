@@ -16,6 +16,7 @@ from rich.progress import track
 RETRIES = 3
 SHORT_WINDOW = 5
 LONG_WINDOW = 20
+savePlot = True
 
 # ===================================================================== #
 #                          LOAD TICKER DATA                             #
@@ -107,7 +108,9 @@ rprint(panel)
 # ================================================================= #
 #                            PLOT THE GRAPH                         #
 # ================================================================= #
-plt.figure(figsize=(14, 7))
+
+plt.figure(figsize=(14,7))
+
 plt.plot(data.index, data['Close'], label='Close Price', color='blue', alpha=0.6)
 plt.plot(sma_data.index, sma_data['SMAshort'], label=f'{SHORT_WINDOW}-Day SMA', color='orange')
 plt.plot(sma_data.index, sma_data['SMAlong'], label=f'{LONG_WINDOW}-Day SMA', color='magenta')
@@ -138,4 +141,10 @@ plt.ylabel('Price ($)')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.show()
+
+if savePlot:
+    os.makedirs("savePlots", exist_ok=True)
+    plt.savefig(f"{ticker}_plot.png")
+    print(f'Plot saved to savePlot/{ticker}_plot.png')
+else:
+    plt.show()
