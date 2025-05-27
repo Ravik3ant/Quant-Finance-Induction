@@ -7,6 +7,7 @@ import time
 import pandas as pd
 import yfinance as yf
 import matplotlib.pyplot as plt
+import rich
 from rich import print as rprint
 from rich.panel import Panel
 from rich.progress import track
@@ -21,7 +22,7 @@ retries = 3
 #                  LOADING THE DATA FROM CSV FILE                      #
 # ==================================================================== #
 
-tickerList = pd.read_csv("tickers.csv")
+tickerList = pd.read_csv("StatsNAnalysis/tickers.csv")
 
 # ==================================================================== #
 #                  SELECTION OF COMPANY BY USER                        #
@@ -74,13 +75,13 @@ data['Daily Return'] = data['Close'].pct_change()*100
 data['Rolling Mean'] = (data['Daily Return']/100).rolling(window=7).mean()
 data['Rolling Std'] = (data['Daily Return']/100).rolling(window=7).std()
 
-data.dropna() # DROPS ALL NAN 
+data = data.dropna() # DROPS ALL NAN 
 
 # # ==================================================================== #
 # #                     TEMORARY PRINT OF DATA                           #
 # # ==================================================================== #
 
-# print(data)
+print(data)
 
 # ==================================================================== #
 #                        PLOTTING THE DATA                             #
