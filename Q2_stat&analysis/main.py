@@ -33,7 +33,6 @@ try:
     tickerSelector = int(input("Enter a Number b/w 0 - 9 to Select a Company: "))
     if tickerSelector < 0 or tickerSelector > 9:
         raise ValueError("Invalid input! Please enter a number between 0 and 9.")
-    # You can continue using tickerSelector here
     print("You selected:", tickerSelector)
 except ValueError as e:
     rich.print(f"[bold red]ERROR: {e}")

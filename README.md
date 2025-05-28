@@ -11,9 +11,9 @@ Each project emphasizes hands-on experience with financial concepts such as tech
 ```
 .
 ├── GainersNLosers
-│   └──  main.py
+│   └── main.py
 │   └── requirements.txt
-│   └──ticker.csv
+│   └── ticker.csv
 ├── Portfolio Tracker (Incomplete)
 │   └── main.py
 │   └── requirements.txt
