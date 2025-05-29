@@ -31,6 +31,14 @@ Each project emphasizes hands-on experience with financial concepts such as tech
 
 ---
 
+## 📦 SETUP PYTHON VENV
+
+```bash
+source venv/bin/activate.fish
+```
+
+---
+
 ## 📈 Q1: Simple Moving Average (SMA) Crossover Strategy
 
 **Objective**: Implement a basic trading strategy using 5-day and 20-day SMAs.
@@ -50,7 +58,6 @@ Each project emphasizes hands-on experience with financial concepts such as tech
 
 ```bash
 cd Q1_SMA
-source venv/bin/activate.<according to your shell>
 pip insta  -r requirements.txt
 python main.py
 ```
@@ -78,7 +85,6 @@ This helps understand how volatile a stock is and how its return behavior change
 
 ```bash
 cd Q2_stat&analysis
-source venv/bin/activate.<shell>
 pip install -r requirements.txt
 python main.py
 ```
@@ -126,7 +132,6 @@ python Q3_Portfolio_Tracker.py
 
 ```bash
 cd Q4_gainers&losers
-source venv/bin/activate.<shell>
 pip install -r requirements.txt
 python main.py
 ```
